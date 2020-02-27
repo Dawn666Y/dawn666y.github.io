@@ -19,7 +19,8 @@
       <guid>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 安装 hugo  安装之前需要知道 hugo 是以 golang 编写的一个静态博客搭建框架，所以在开始安装前必须保证电脑上拥有 go 语言的环境，Go 语言安装下载地址Go 官网，版本至少1.11以上，另外部署项目到 Github 上也需要安装 git，最后再安装hugo
- 下载压缩包之后解压</description>
+ 下载压缩包之后解压
+这里是测试能否直接使用图床：</description>
     </item>
     
   </channel>
