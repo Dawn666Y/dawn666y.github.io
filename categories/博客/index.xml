@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>开发 on Dawn&#39;s vlog | Personal </title>
-    <link>https://dawn666y.github.io/categories/%E5%BC%80%E5%8F%91/</link>
-    <description>Recent content in 开发 on Dawn&#39;s vlog | Personal </description>
+    <title>博客 on Dawn&#39;s vlog | Personal </title>
+    <link>https://dawn666y.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on Dawn&#39;s vlog | Personal </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dawn666y.github.io/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dawn666y.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,7 @@
       
       <guid>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
- 众所周知受疫情影响，全国大多数同胞宅在家陷入无所事事的状态，本人本着蛋疼找事做的原则尝试搭建一个个人博客以供长期使用
+ 安装 hugo 创建博客 网站部署   众所周知受疫情影响，全国大多数同胞宅在家陷入无所事事的状态，本人本着蛋疼找事做的原则尝试搭建一个个人博客以供长期使用
  废话少说！让我们开始吧！
 安装 hugo  安装之前需要知道 hugo 是以 golang 编写的一个静态博客搭建框架，所以在开始安装前必须保证电脑上拥有 go 语言的环境，Go 语言安装下载地址Go 官网，版本至少1.11以上，另外部署项目到 Github 上也需要安装 git，最后再安装hugo
  hugo 下载压缩包之后解压目录如下：
@@ -30,8 +30,7 @@
 &amp;gt; hugo version 像下面这样弹出版本信息那就是 hugo 安装成功啦！恭喜！
 创建博客 在 hugo 的安装目录下&amp;ndash;我的是D:\hugo，按住 shift 点鼠标右键 选择在此处打开命令行窗口
 输入命令(名字随便起，我输的是 blog)：
-hugo new site blog 然后就可以在文件夹里看到 blog，点进去看看结构 (你应该除了 public 都有，那是后话，暂时忽略)
- 然后去下载我们的网站需要的主题，Hugo 官方主题库，挑个喜欢的，我用的是LeaveIt，比较简洁，也就是你现在看到的样子，下载主题可以使用git clone，我选择直接在 github 官网下载压缩包：LeaveIt on Github</description>
+hugo new site blog 然后就可以在文件夹里看到 blog，点进去看看结构 (你应该除了 public 都有，那是后话，暂时忽略)</description>
     </item>
     
     <item>
@@ -45,7 +44,7 @@ hugo new site blog 然后就可以在文件夹里看到 blog，点进去看看�
 生成新数据 再次在 blog 文件夹下执行 hugo 的 build 命令重新生成网站数据
 hugo --theme=LeaveIt --baseUrl=&amp;#34;https://dawn666y.github.io/&amp;#34; --buildDrafts 提交部署 在 public 文件夹下依次执行
 git branch newBranch git checkout newBranch git add . git commit -m &amp;#34;第二次提交&amp;#34; git checkout master git merge newBranch git push -u origin master 简单解释一下
- 创建一个新分支 newBranch 切换当前操作分支到新分支 添加数据到新分支 提交数据到新分支 切换当前操作分支到 master 合并新分支到 master 再次 push 部署   新的数据就完成了部署
+ 创建一个新分支 newBranch 切换当前操作分支到新分支 添加数据到新分支 提交数据到新分支 切换当前操作分支到 master 合并新分支到 master 再次 push 部署   新的数据就完成了部署，提醒一下 Github 上的资源缓存更新有点慢，在国内可能需要等待一小段时间，然后强制刷新一下就可以看到更新后的博文啦
  </description>
     </item>
     
