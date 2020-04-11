@@ -6,10 +6,31 @@
     <description>Recent content in 开发 on Dawn&#39;s vlog | Personal </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dawn666y.github.io/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>设计毕设预约挂号系统中遇到的问题</title>
+      <link>https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
+本文旨在描述搭建毕设的过程中遇到的困难与解决方案，为论文与 PPT 提供一些思路
+ 相信多年后的我看到当初这样的自己也会觉得羞愧难当—— 怎么当初就犯了这么沙雕的错误呢？！
+本文纯属想到哪里写到哪里，算是毕设大体完成后的总结
+  layui  前端我真的不熟悉，HTML+CSS+JavaScript 的功课没有好好学吃了大亏，想着使用对后端程序员十分友好的 layui 兴许可以缓解尴尬的场面，然后我还是被前端血虐，下面就看看我都犯过什么愚蠢的错误 top 很多……
+   渲染 select 下拉框出错
+众所周知，layui 中的下拉框渲染是跟着 form 标签一起的，在 js 中也是使用form.render(&#39;selector&#39;)的语法来完成下拉框样式的渲染，可我偏偏忽视了这一点，select 标签孤零零站在寒风中没有被 form 抱住，然后渲染肯定是失败啦……
+教训：layui 渲染的 select 下拉框一定要包含在 form 标签内
+  标签内 onclick=&amp;quot;fucntion()&amp;ldquo;属性不起作用
+想在按钮点击的时候触发一个点击事件，我一直使用 layui 自带的 jQuery，所以函数要写在 layui 函数内部，但是点击事件怎么都不起作用，经过一番学习 百度之后才了解 layui 内部的函数不能在外面直接调用
+教训：layui 内部的函数想要在外部调用就必须使用 window.函数名 = function(){} 的方式声明
+  自定义的发送 post 后端验证的 lay-verify 不起作用
+在用户修改密码的页面中，想要验证用户输入的旧密码是否正确就尝试加一个自己的表单验证，在验证函数里发送 ajax 请求来验证数据是否合法，但是每次点击提交按钮之后，验证都没有执行，调试一番后发现，表单总是先一步提交，而验证的方法总是后一步执行，只能归咎与我对 ajax、layui 的 API 还不够熟悉，解决方案就是在提交表单时嵌套一次验证， 验证通过之后再提交整个表单</description>
+    </item>
     
     <item>
       <title>一个仓库管理系统的实现</title>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Dawn">
+  
+  
+  
+  <link rel="prev" href="https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/" />
+  
+  <link rel="canonical" href="https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           设计毕设预约挂号系统中遇到的问题 | Dawn&#39;s vlog | Personal 
+       
+  </title>
+  <meta name="title" content="设计毕设预约挂号系统中遇到的问题 | Dawn&#39;s vlog | Personal ">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/dawn666y.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "设计毕设预约挂号系统中遇到的问题",
+    "headline" : "设计毕设预约挂号系统中遇到的问题",
+    "description" : "描述一些bug与解决方法",
+    "inLanguage" : "zh-CN",
+    "author" : "Dawn",
+    "creator" : "Dawn",
+    "publisher": "Dawn",
+    "accountablePerson" : "Dawn",
+    "copyrightHolder" : "Dawn",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-03 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-04-03 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/dawn666y.github.io\/2020\/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98\/",
+    "wordCount" : "122",
+    "keywords" : [ "java","shiro","layui","mysql","navicat","aop", "Dawn\x27s vlog | Personal "]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dawn666y.github.io/">Dawn&#39;s vlog | Personal </a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dawn666y.github.io/">Dawn&#39;s vlog | Personal </a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">设计毕设预约挂号系统中遇到的问题</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://dawn666y.github.io/" rel="author">Dawn</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-04-03 itemprop="datePublished">April 3, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://dawn666y.github.io/categories/%E5%BC%80%E5%8F%91/"> 开发 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><strong>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！</strong></p>
+<p>本文旨在描述搭建毕设的过程中遇到的困难与解决方案，为论文与 PPT 提供一些思路</p>
+<blockquote>
+<p>相信多年后的我看到当初这样的自己也会觉得羞愧难当—— <del>怎么当初就犯了这么沙雕的错误呢？！</del></p>
+<p>本文纯属想到哪里写到哪里，算是毕设大体完成后的总结</p>
+</blockquote>
+<hr>
+<h1 id="layui">layui</h1>
+<blockquote>
+<p>前端我真的不熟悉，HTML+CSS+JavaScript 的功课没有好好学吃了大亏，想着使用对后端程序员十分友好的 layui 兴许可以缓解尴尬的场面，然后我还是被前端血虐，下面就看看我都犯过什么愚蠢的错误 top 很多……</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>渲染 select 下拉框出错</strong></p>
+<p>众所周知，layui 中的下拉框渲染是跟着 form 标签一起的，在 js 中也是使用<code>form.render('selector')</code>的语法来完成下拉框样式的渲染，可我偏偏忽视了这一点，select 标签孤零零站在寒风中没有被 form 抱住，然后渲染肯定是失败啦……</p>
+<p><strong>教训：layui 渲染的 select 下拉框一定要包含在 form 标签内</strong></p>
+</li>
+<li>
+<p><strong>标签内 onclick=&quot;fucntion()&ldquo;属性不起作用</strong></p>
+<p>想在按钮点击的时候触发一个点击事件，我一直使用 layui 自带的 jQuery，所以函数要写在 layui 函数内部，但是点击事件怎么都不起作用，<del>经过一番学习</del> 百度之后才了解 layui 内部的函数不能在外面直接调用</p>
+<p><strong>教训：layui 内部的函数想要在外部调用就必须使用 <code>window.函数名 = function(){}</code> 的方式声明</strong></p>
+</li>
+<li>
+<p><strong>自定义的发送 post 后端验证的 lay-verify 不起作用</strong></p>
+<p>在用户修改密码的页面中，想要验证用户输入的旧密码是否正确就尝试加一个自己的表单验证，在验证函数里发送 ajax 请求来验证数据是否合法，但是每次点击提交按钮之后，验证都没有执行，调试一番后发现，表单总是先一步提交，而验证的方法总是后一步执行，只能归咎与我对 ajax、layui 的 API 还不够熟悉，<strong>解决方案就是在提交表单时嵌套一次验证， 验证通过之后再提交整个表单</strong></p>
+</li>
+</ol>
+<hr>
+<h1 id="navicat">navicat</h1>
+<blockquote>
+<p>数据库可视化工具——偏偏坑到我这种不长眼睛的主……事实证明，哪怕真的可视化了，我们也会忽略很多东西 <del>通俗点说就是瞎</del></p>
+</blockquote>
+<ol>
+<li>
+<p><strong>datetime 类型的字段数据莫名其妙地自动更新</strong></p>
+<p>我的数据库中有个表的数据是多个用户可以操作的，为了避免同时修改导致数据出错的情况，加上了一个 datetime 类型的&quot;更新时间&quot;字段，但是在每次更新的时候，隔壁也是 datetime 类型的好兄弟&quot;创建时间&quot;字段也会更新，挠破头之后问了大佬才一语点醒我：“你数据库这个字段有没有设置成按照时间戳自动更新？”</p>
+<p>我一检查，人都傻了，还真是</p>
+<p><img src="https://i.loli.net/2020/04/03/rB2MsW3NTVqF46m.png" alt="image.png"></p>
+<p><strong>教训：navicat 中 datetime 类型字段会默认勾选根据时间戳自动更新，设计字段时根据需要选择</strong></p>
+</li>
+</ol>
+<hr>
+<h1 id="shiro">shiro</h1>
+<blockquote>
+<p>非常常见的权限管理框架，我用来设置角色、权限，和 thymeleaf 结合使用在同一个页面中为不同的用户响应出不同的页面元素</p>
+</blockquote>
+<ol>
+<li>
+<p>shiro:hasPermission 不起作用</p>
+<p>兴致勃勃地添加了 html 头部的 thymeleaf 和 shiro 的命名空间，写上 shiro:hasPermission 属性，但是不起作用，打了断点，后端也输出了该用户的权限内容，可页面死活就是加载不出来，死马当活马医试了一下重启，才知道和 devtools 的热部署有关系</p>
+</li>
+</ol>
+<p><strong>教训：IDEA 中的 devtools 热部署项目会让 shiro 权限丢失，我们需要重启项目再次登录才行</strong></p>
+<hr>
+<h1 id="aop">AOP</h1>
+<blockquote>
+<p>用 Spring 切面做一个缓存，想减轻大量重复查询给服务器带来的无意义压力，所以把不常修改的且会被大量查询的小部分数据放在一个内存的 map 中管理，因为内存的访问速度一定是快于硬盘的</p>
+</blockquote>
+<ol>
+<li>
+<p>更新数据之后缓存中部分字段丢失</p>
+<p>我更新了一个数据库的一条数据，但是发现再次查询的时候缺少很多字段，只有更新的字段有值，这个其实非常好排查，打一个断点就不难想到是缓存的问题，<strong>前端提交表单的时候只传输了更新的数据而没有其它字段内容</strong>，而我在更新 map 容器里的缓存数据时用了 Spring 提供的<code>BeanUtils</code>工具类来拷贝更新后的数据，没有更新的字段自然就为 null。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 复制更新后的数据
+</span><span style="color:#75715e"></span>BeanUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">copyProperties</span><span style="color:#f92672">(</span>dept<span style="color:#f92672">,</span> newDept<span style="color:#f92672">);</span>
+</code></pre></div><p><strong>教训：copyProperties 的这个方法要慎用，所有同名字段都会被拷贝，无论其是否为 null</strong></p>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Dawn </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/>https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/java/">
+                    #java</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/shiro/">
+                    #shiro</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/layui/">
+                    #layui</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/mysql/">
+                    #mysql</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/navicat/">
+                    #navicat</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/aop/">
+                    #aop</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://dawn666y.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="prev" rel="prev" title="一个医师排班算法的实现"><i class="iconfont icon-left"></i>&nbsp;一个医师排班算法的实现</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://dawn666y.github.io/">Dawn</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on Dawn&#39;s vlog | Personal </title>
-    <link>https://dawn666y.github.io/tags/java/</link>
-    <description>Recent content in java on Dawn&#39;s vlog | Personal </description>
+    <title>navicat on Dawn&#39;s vlog | Personal </title>
+    <link>https://dawn666y.github.io/tags/navicat/</link>
+    <description>Recent content in navicat on Dawn&#39;s vlog | Personal </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dawn666y.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dawn666y.github.io/tags/navicat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,25 +30,6 @@
 教训：layui 内部的函数想要在外部调用就必须使用 window.函数名 = function(){} 的方式声明
   自定义的发送 post 后端验证的 lay-verify 不起作用
 在用户修改密码的页面中，想要验证用户输入的旧密码是否正确就尝试加一个自己的表单验证，在验证函数里发送 ajax 请求来验证数据是否合法，但是每次点击提交按钮之后，验证都没有执行，调试一番后发现，表单总是先一步提交，而验证的方法总是后一步执行，只能归咎与我对 ajax、layui 的 API 还不够熟悉，解决方案就是在提交表单时嵌套一次验证， 验证通过之后再提交整个表单</description>
-    </item>
-    
-    <item>
-      <title>一个医师排班算法的实现</title>
-      <link>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</link>
-      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</guid>
-      <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
-本文旨在实现一个智能排班的算法
- 需求分析 所需数据 项目落地 算法设计 总结   毕设项目中核心需求是要根据医师的手术、请假、已预约时间还有医师的级别来进行自动排班，也是毕设中最具难度的一个需求
-  需求分析  用户要选择医师进行预约时，查询出该医师的排班时间，可用则显示**“可预约”**，否则不显示 医院查询各个科室下的排班情况，显示对应时间段是谁在坐诊 医师可以查询到自己的排班情况 查询的时限都是当天起未来一周 （即今日周一，则最远可查询到下周一）   所需数据  医师的 ID 医师的级别 手术或者请假的安排   项目落地   前台传来医师 ID或者科室 ID
- 医院可以根据科室 ID 查看不同科室的排班表，而医生只能查询自己科室的排班表，最后用户根据医师 ID 和科室 ID 查询医师的个人排班表
- 我的项目后台可以查询到发送查询请求的这个用户是医院、医师还是患者，所以判断查询科室排班还是医师排班不难
-  根据科室 ID 查询科室下的所有医师
-  提取关键医师信息，初始化一个数组表示医师时间表，把这些封装暂存
-  按照医师级别进行分组，将级别相同的医师存入同一 List
-    根据每个医生 ID 查询请假表，获取手术或者请假的安排，根据请假表将对应医师的对应时间段置 0
-  根据各个医师的排班表完成科室的排班，优先选择高级别的医师填充科室排班表</description>
     </item>
     
   </channel>
