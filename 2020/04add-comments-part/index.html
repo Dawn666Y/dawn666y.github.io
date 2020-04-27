@@ -9,9 +9,9 @@
   
   
   
-  <link rel="prev" href="https://dawn666y.github.io/2020/%E6%9C%BA%E5%9C%BA%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/" />
-  <link rel="next" href="https://dawn666y.github.io/2020/04add-comments-part/" />
-  <link rel="canonical" href="https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/" />
+  <link rel="prev" href="https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/" />
+  
+  <link rel="canonical" href="https://dawn666y.github.io/2020/04add-comments-part/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           在博文上方添加阅读条 | Dawn&#39;s vlog | Personal 
+           为博客添加评论系统 | Dawn&#39;s vlog | Personal 
        
   </title>
-  <meta name="title" content="在博文上方添加阅读条 | Dawn&#39;s vlog | Personal ">
+  <meta name="title" content="为博客添加评论系统 | Dawn&#39;s vlog | Personal ">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/dawn666y.github.io\/"
     },
     "articleSection" : "posts",
-    "name" : "在博文上方添加阅读条",
-    "headline" : "在博文上方添加阅读条",
-    "description" : "完善博客",
+    "name" : "为博客添加评论系统",
+    "headline" : "为博客添加评论系统",
+    "description" : "添加gitalk用作评论系统",
     "inLanguage" : "zh-CN",
     "author" : "Dawn",
     "creator" : "Dawn",
@@ -54,10 +54,10 @@
     "accountablePerson" : "Dawn",
     "copyrightHolder" : "Dawn",
     "copyrightYear" : "2020",
-    "datePublished": "2020-04-26 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2020-04-26 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/dawn666y.github.io\/2020\/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1\/",
-    "wordCount" : "23",
+    "datePublished": "2020-04-27 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-04-27 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/dawn666y.github.io\/2020\/04add-comments-part\/",
+    "wordCount" : "55",
     "keywords" : [ "leaveit", "Dawn\x27s vlog | Personal "]
 }
 </script>
@@ -122,11 +122,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">在博文上方添加阅读条</h1>
+        <h1 class="post-title" itemprop="name headline">为博客添加评论系统</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://dawn666y.github.io/" rel="author">Dawn</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-04-26 itemprop="datePublished">April 26, 2020</time>
+                on <time datetime=2020-04-27 itemprop="datePublished">April 27, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -155,15 +155,40 @@
           
 
           <p><strong>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！</strong></p>
-<p>在博文上方添加阅读进度条</p>
-<h1 id="参考来源">参考来源</h1>
-<p><a href="https://mogeko.me/">Mogeko</a>的博客<a href="https://mogeko.me/2019/070/">为 LeaveIt 主题添加阅读进度条</a></p>
+<h1 id="添加步骤">添加步骤</h1>
+<p>参考博文：<a href="https://mogeko.me/2018/024/">Megeko&ndash;为 Hugo 添加谈笑风生区 (Gitalk)</a></p>
+<p>在下方就可以看到评论区</p>
 <h1 id="遇到的问题">遇到的问题</h1>
-<p>hugo 没有编译 scss 文件，我翻了翻文章下面<a href="https://mogeko.me/">Mogeko</a>前辈的解释才知道自己下载的不是完整版的 hugo</p>
-<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200426214512280.png" alt="image-20200426214512280"></p>
-<p>去 GitHub 主页又重新下载了完整版的 hugo <a href="https://github.com/gohugoio/hugo/releases">hugo release-GitHub</a></p>
-<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200426214714540.png" alt="image-20200426214714540"></p>
-<p>大家根据自己的系统选择对应的版本替换原来的 hugo 即可</p>
+<p>我的评论区上方出现一行报错</p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200427160657067.png" alt="image-20200427160657067"></p>
+<p>百度之后才知道是我的页面链接名过长导致的&ndash;<em>gitalk 限制域名长度不超过 50，原因未知</em>，因为包含了中文</p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200427161110338.png" alt="image-20200427161110338"></p>
+<p>而这个链接是被 gitalk 当作 id 写入的，上面我们在配置 config.toml 时填写的 id 那一栏就是指定 gitalk 加载的 id</p>
+<p>我的博客会产生这样的链接，是因为我的 markdown 格式的博文是采用中文命名的，hugo 在编译页面的时候会使用文件名作为跳转到博文的链接，修改所有的本地 markdown 博文为非中文名再编译部署就好了</p>
+<p>此外，gitalk 需要拥有者初始化每一篇需要搭建评论区的博文，初始化激活的步骤很简单，博主用自己的 github 账户登录一下这篇博文的评论区就可以了。<del>尽管这意味着今后每发表一篇需要评论区的博文就要执行一遍初始化的流程</del></p>
+<h1 id="最终效果">最终效果</h1>
+<p>测试评论能否成功，输入以下内容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">测试一下刚刚添加的gitalk评论区
+
+测试是否支持markdown
+
+​```java
+// 这是代码
+public class Hello{
+}
+​```
+
+这是链接：[本博客主页](https://dawn666y.github.io/)
+
+这是图片：![表情包](https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200418134722115.png)
+</code></pre></div><p>编辑模式：</p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200427153715094.png" alt="image-20200427153715094"></p>
+<p>预览模式：</p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200427153814364.png" alt="image-20200427153814364"></p>
+<p>可以点击右下角按钮切换两个模式</p>
+<p>评论效果：</p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200427160526047.png" alt="image-20200427160526047"></p>
+<p>评论区就这样搭建完成了</p>
 
     </div>
 
@@ -178,7 +203,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/>https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/</span>
+                    <a href=https://dawn666y.github.io/2020/04add-comments-part/>https://dawn666y.github.io/2020/04add-comments-part/</span>
             </p>
             
              
@@ -207,10 +232,8 @@
 
     <div class="post-nav">
         
-        <a href="https://dawn666y.github.io/2020/%E6%9C%BA%E5%9C%BA%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/" class="prev" rel="prev" title="机场使用感受"><i class="iconfont icon-left"></i>&nbsp;机场使用感受</a>
+        <a href="https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/" class="prev" rel="prev" title="在博文上方添加阅读条"><i class="iconfont icon-left"></i>&nbsp;在博文上方添加阅读条</a>
          
-        
-        <a href="https://dawn666y.github.io/2020/04add-comments-part/" class="next" rel="next" title="为博客添加评论系统">为博客添加评论系统&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

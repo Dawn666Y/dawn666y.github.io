@@ -6,10 +6,32 @@
     <description>Recent content in leaveit on Dawn&#39;s vlog | Personal </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dawn666y.github.io/tags/leaveit/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为博客添加评论系统</title>
+      <link>https://dawn666y.github.io/2020/04add-comments-part/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawn666y.github.io/2020/04add-comments-part/</guid>
+      <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
+添加步骤 参考博文：Megeko&amp;ndash;为 Hugo 添加谈笑风生区 (Gitalk)
+在下方就可以看到评论区
+遇到的问题 我的评论区上方出现一行报错
+百度之后才知道是我的页面链接名过长导致的&amp;ndash;gitalk 限制域名长度不超过 50，原因未知，因为包含了中文
+而这个链接是被 gitalk 当作 id 写入的，上面我们在配置 config.toml 时填写的 id 那一栏就是指定 gitalk 加载的 id
+我的博客会产生这样的链接，是因为我的 markdown 格式的博文是采用中文命名的，hugo 在编译页面的时候会使用文件名作为跳转到博文的链接，修改所有的本地 markdown 博文为非中文名再编译部署就好了
+此外，gitalk 需要拥有者初始化每一篇需要搭建评论区的博文，初始化激活的步骤很简单，博主用自己的 github 账户登录一下这篇博文的评论区就可以了。尽管这意味着今后每发表一篇需要评论区的博文就要执行一遍初始化的流程
+最终效果 测试评论能否成功，输入以下内容
+测试一下刚刚添加的gitalk评论区测试是否支持markdown​```java// 这是代码public class Hello{}​```这是链接：[本博客主页](https://dawn666y.github.io/)这是图片：![表情包](https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200418134722115.png)编辑模式：
+预览模式：
+可以点击右下角按钮切换两个模式
+评论效果：
+评论区就这样搭建完成了</description>
+    </item>
     
     <item>
       <title>在博文上方添加阅读条</title>
