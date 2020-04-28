@@ -13,10 +13,10 @@
     
     <item>
       <title>使用hugo搭建个人博客</title>
-      <link>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://dawn666y.github.io/2020/01hugo-blog-begin/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://dawn666y.github.io/2020/01hugo-blog-begin/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
  安装 hugo 创建博客 网站部署   众所周知受疫情影响，全国大多数同胞宅在家陷入无所事事的状态，本人本着蛋疼找事做的原则尝试搭建一个个人博客以供长期使用
  废话少说！让我们开始吧！
@@ -35,10 +35,10 @@ hugo new site blog 然后就可以在文件夹里看到 blog，点进去看看�
     
     <item>
       <title>对博文数据更新再部署</title>
-      <link>https://dawn666y.github.io/2020/%E5%AF%B9%E5%8D%9A%E6%96%87%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%86%8D%E9%83%A8%E7%BD%B2/</link>
+      <link>https://dawn666y.github.io/2020/02hugo-redeployment/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E5%AF%B9%E5%8D%9A%E6%96%87%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%86%8D%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://dawn666y.github.io/2020/02hugo-redeployment/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 删除 public 删除 public 目录下除.git以外的所有数据
 生成新数据 再次在 blog 文件夹下执行 hugo 的 build 命令重新生成网站数据

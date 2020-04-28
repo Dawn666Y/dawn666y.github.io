@@ -13,11 +13,16 @@
     
     <item>
       <title>为博客添加评论系统</title>
-      <link>https://dawn666y.github.io/2020/04add-comments-part/</link>
+      <link>https://dawn666y.github.io/2020/05add-comments-part/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/04add-comments-part/</guid>
+      <guid>https://dawn666y.github.io/2020/05add-comments-part/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
+准备功课  了解了一下静态博客添加评论应该怎样实现，网上的大多数教程都是调用第三方，常见的有Valine、gitalk、gitment
+ Valine 这个试了一下，要支付宝实名认证，还要绑定手机，比较麻烦，我还是更希望自己的互联网身份是匿名的，不考虑这个方案了
+需要了解后者选择使用Valine的同学移步姑苏流白&amp;ndash;Hugo Comments
+gitalk 和博主的github绑在一起，使用也比较简单，参考这个博主的文章Mogeko&amp;ndash;为 Hugo 添加谈笑风生区 (Gitalk)
+gitment 这个很久没维护了，而且据说有github账户安全问题，也不考虑
 添加步骤 参考博文：Megeko&amp;ndash;为 Hugo 添加谈笑风生区 (Gitalk)
 在下方就可以看到评论区
 遇到的问题 我的评论区上方出现一行报错
@@ -35,10 +40,10 @@
     
     <item>
       <title>在博文上方添加阅读条</title>
-      <link>https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/</link>
+      <link>https://dawn666y.github.io/2020/04add-read-line/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%8A%E6%96%B9%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%9D%A1/</guid>
+      <guid>https://dawn666y.github.io/2020/04add-read-line/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 在博文上方添加阅读进度条
 参考来源 Mogeko的博客为 LeaveIt 主题添加阅读进度条
@@ -49,10 +54,10 @@
     
     <item>
       <title>机场使用感受</title>
-      <link>https://dawn666y.github.io/2020/%E6%9C%BA%E5%9C%BA%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/</link>
+      <link>https://dawn666y.github.io/2020/02airport-experience/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E6%9C%BA%E5%9C%BA%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/</guid>
+      <guid>https://dawn666y.github.io/2020/02airport-experience/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 本文旨在记录我的机场使用记录供大家参考，后续可能会更新
  我的机场选择历史  棱镜 VPN(已跑路) 忘了名字的 MoCloud 几鸡 Cord Cloud STC-Cloud（在用）   总结 一些人生建议  我的机场选择历史  用过 6 个机场，不打广告，名称分别为棱镜 VPN、忘了名字、MoCloud、几鸡、Cord Cloud、STC-Cloud(现在)，下面挨个总结
@@ -114,10 +119,10 @@ VPN 因为一些特殊原因已被翻墙的技术党淘汰——注意这项技�
     
     <item>
       <title>一个医师排班算法的实现</title>
-      <link>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://dawn666y.github.io/2020/02algorithm-schedule/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://dawn666y.github.io/2020/02algorithm-schedule/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 本文旨在实现一个智能排班的算法
  需求分析 所需数据 项目落地 算法设计 总结   毕设项目中核心需求是要根据医师的手术、请假、已预约时间还有医师的级别来进行自动排班，也是毕设中最具难度的一个需求
@@ -144,10 +149,10 @@ VPN 因为一些特殊原因已被翻墙的技术党淘汰——注意这项技�
     
     <item>
       <title>使用hugo搭建个人博客</title>
-      <link>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://dawn666y.github.io/2020/01hugo-blog-begin/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://dawn666y.github.io/2020/01hugo-blog-begin/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
  安装 hugo 创建博客 网站部署   众所周知受疫情影响，全国大多数同胞宅在家陷入无所事事的状态，本人本着蛋疼找事做的原则尝试搭建一个个人博客以供长期使用
  废话少说！让我们开始吧！
@@ -166,10 +171,10 @@ hugo new site blog 然后就可以在文件夹里看到 blog，点进去看看�
     
     <item>
       <title>对博文数据更新再部署</title>
-      <link>https://dawn666y.github.io/2020/%E5%AF%B9%E5%8D%9A%E6%96%87%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%86%8D%E9%83%A8%E7%BD%B2/</link>
+      <link>https://dawn666y.github.io/2020/02hugo-redeployment/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E5%AF%B9%E5%8D%9A%E6%96%87%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%86%8D%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://dawn666y.github.io/2020/02hugo-redeployment/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 删除 public 删除 public 目录下除.git以外的所有数据
 生成新数据 再次在 blog 文件夹下执行 hugo 的 build 命令重新生成网站数据

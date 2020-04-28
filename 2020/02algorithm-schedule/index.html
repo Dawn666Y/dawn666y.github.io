@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Dawn">
+  
+  
+  
+  <link rel="prev" href="https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" />
+  <link rel="next" href="https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" />
+  <link rel="canonical" href="https://dawn666y.github.io/2020/02algorithm-schedule/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           一个医师排班算法的实现 | Dawn&#39;s vlog | Personal 
+       
+  </title>
+  <meta name="title" content="一个医师排班算法的实现 | Dawn&#39;s vlog | Personal ">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/dawn666y.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "一个医师排班算法的实现",
+    "headline" : "一个医师排班算法的实现",
+    "description" : "来自我的毕设中的难度最大的核心需求",
+    "inLanguage" : "zh-CN",
+    "author" : "Dawn",
+    "creator" : "Dawn",
+    "publisher": "Dawn",
+    "accountablePerson" : "Dawn",
+    "copyrightHolder" : "Dawn",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-20 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-03-20 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/dawn666y.github.io\/2020\/02algorithm-schedule\/",
+    "wordCount" : "1039",
+    "keywords" : [ "java","algorithm", "Dawn\x27s vlog | Personal "]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+    <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dawn666y.github.io/">Dawn&#39;s vlog | Personal </a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+    <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dawn666y.github.io/">Dawn&#39;s vlog | Personal </a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">博文</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">一个医师排班算法的实现</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://dawn666y.github.io/" rel="author">Dawn</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-20 itemprop="datePublished">March 20, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://dawn666y.github.io/categories/%E7%AE%97%E6%B3%95/"> 算法 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><strong>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！</strong></p>
+<p>本文旨在实现一个智能排班的算法</p>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90">需求分析</a></li>
+<li><a href="#%E6%89%80%E9%9C%80%E6%95%B0%E6%8D%AE">所需数据</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0">项目落地</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1">算法设计</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>毕设项目中核心需求是要根据医师的手术、请假、已预约时间还有医师的级别来进行自动排班，也是毕设中最具难度的一个需求</p>
+</blockquote>
+<hr>
+<h1 id="需求分析">需求分析</h1>
+<ul>
+<li>用户要选择医师进行预约时，查询出该医师的排班时间，可用则显示**“可预约”**，否则不显示</li>
+<li>医院查询<strong>各个科室下的排班情况</strong>，显示对应时间段是谁在坐诊</li>
+<li>医师可以查询到<strong>自己的排班情况</strong></li>
+<li>查询的时限都是当天起未来一周 （即<strong>今日周一，则最远可查询到下周一</strong>）</li>
+</ul>
+<hr>
+<h1 id="所需数据">所需数据</h1>
+<ul>
+<li>医师的 ID</li>
+<li>医师的级别</li>
+<li>手术或者请假的安排</li>
+</ul>
+<hr>
+<h1 id="项目落地">项目落地</h1>
+<ul>
+<li>
+<p>前台传来<strong>医师 ID</strong>或者<strong>科室 ID</strong></p>
+<blockquote>
+<p>医院可以根据科室 ID 查看不同科室的排班表，而医生只能查询自己科室的排班表，最后用户根据医师 ID 和科室 ID 查询医师的个人排班表</p>
+</blockquote>
+<p>我的项目后台可以查询到发送查询请求的这个用户是医院、医师还是患者，所以判断查询科室排班还是医师排班不难</p>
+</li>
+<li>
+<p>根据科室 ID 查询科室下的所有医师</p>
+<ol>
+<li>
+<p><strong>提取关键医师信息，初始化一个数组表示医师时间表，把这些封装暂存</strong></p>
+</li>
+<li>
+<p><strong>按照医师级别进行分组，将级别相同的医师存入同一 List</strong></p>
+</li>
+</ol>
+</li>
+<li>
+<p>根据每个医生 ID 查询请假表，<strong>获取手术或者请假的安排，根据请假表将对应医师的对应时间段置 0</strong></p>
+</li>
+<li>
+<p>根据各个医师的排班表完成科室的排班，<strong>优先选择高级别的医师填充科室排班表</strong></p>
+</li>
+<li>
+<p>向前台返回对应的排班表</p>
+</li>
+</ul>
+<hr>
+<h1 id="算法设计">算法设计</h1>
+<ul>
+<li>
+<p>建立一个对象封装必要的数据，如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.shining.sys.commons.entity<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> lombok.AllArgsConstructor<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> lombok.Data<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> lombok.NoArgsConstructor<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * @program: shining2
+</span><span style="color:#75715e"> * @description: 医师排班表
+</span><span style="color:#75715e"> * @author: Dawn
+</span><span style="color:#75715e"> * @create: 2020-03-20
+</span><span style="color:#75715e"> */</span>
+<span style="color:#a6e22e">@Data</span>
+<span style="color:#a6e22e">@AllArgsConstructor</span>
+<span style="color:#a6e22e">@NoArgsConstructor</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShiningSchedule</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">// 医师ID
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Integer doctorId<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">// 医师姓名
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> String doctorName<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">// 医师级别
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Integer level<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">// 科室ID
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Integer deptId<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">// 排班时间表
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Integer<span style="color:#f92672">[]</span> schedule<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+<li>
+<p>建立一个 Builder 类构造排班表</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 注入Spring容器
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ScheduleBuilder</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> IDoctorService doctor<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> IDoctorService doctorService<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> ILeaveService leave<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> ILeaveService leaveService<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@PostConstruct</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        doctorService <span style="color:#f92672">=</span> doctor<span style="color:#f92672">;</span>
+        leaveService <span style="color:#f92672">=</span> leave<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>这个 Builder 属于工具类，外部可调用的方法必须是静态的，可我们需要查询数据库来进行数据计算，Spring 容器没有办法为我们自动注入，所以选择命名两个私有变量，一个静态、一个非静态，在初始化这个类组件时将自动注入的非静态成员赋值给静态成员，这样就可以完成注入了，比如上面我的 doctorService、leaveService 两个需要注入的 service 组件就各建立了两个变量，使用@PostConstruct 注解调用初始化方法为静态的变量赋值</p>
+</blockquote>
+<ul>
+<li>建立一个 map 存放信息<code>public static final Map&lt;String, Object&gt; SCHEDULE_MAP = new HashMap&lt;&gt;();</code></li>
+<li>建立两个方法供外部调用</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 拿到部门的排班表
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>ShiningSchedule<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getDeptSchedule</span><span style="color:#f92672">(</span>Integer deptId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        buildDeptSchedule<span style="color:#f92672">(</span>deptId<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>ShiningSchedule<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DEPT_PREFIX <span style="color:#f92672">+</span> deptId<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 拿到医师的排班表
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> ShiningSchedule <span style="color:#a6e22e">getDoctorSchedule</span><span style="color:#f92672">(</span>Integer doctorId<span style="color:#f92672">,</span> Integer deptId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        buildDeptSchedule<span style="color:#f92672">(</span>deptId<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>ShiningSchedule<span style="color:#f92672">)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div><ul>
+<li>
+<p>根据传来的医师、科室 ID 查询数据库拿到科室下所有医生的信息</p>
+<ul>
+<li>
+<p>提取每个医师的 ID、姓名、级别、科室、加上下面这条描述的时间表数组一起封装到前面建立的<code>ShiningSchedule</code>对象中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 初始化医师信息的map：key为doctor:info:医师id，value为数据库格式的医师信息
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getDoctorFromDept</span><span style="color:#f92672">(</span>Integer deptId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> doctorIds <span style="color:#f92672">=</span> doctorService<span style="color:#f92672">.</span><span style="color:#a6e22e">getIdByDeptId</span><span style="color:#f92672">(</span>deptId<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Integer doctorId <span style="color:#f92672">:</span> doctorIds<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            Doctor doctor <span style="color:#f92672">=</span> doctorService<span style="color:#f92672">.</span><span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>doctorId<span style="color:#f92672">);</span>
+            <span style="color:#75715e">// 只取出医师ID、医师姓名、级别信息、科室信息、并初始化排班数组，存入shiningSchedule实体类
+</span><span style="color:#75715e"></span>            ShiningSchedule shiningSchedule <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ShiningSchedule<span style="color:#f92672">(</span>doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getId</span><span style="color:#f92672">(),</span> doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span> doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getLevel</span><span style="color:#f92672">(),</span> doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getDeptId</span><span style="color:#f92672">(),</span> initArray<span style="color:#f92672">());</span>
+            <span style="color:#75715e">// 将信息以doctor:医师ID为key，shiningSchedule为value存入map
+</span><span style="color:#75715e"></span>            SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getId</span><span style="color:#f92672">(),</span> shiningSchedule<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// 额外存入doctor的ID信息
+</span><span style="color:#75715e"></span>        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>DOCTOR_ID_PREFIX<span style="color:#f92672">,</span> doctorIds<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+<li>
+<p>每个医生都初始化一个大小为 16 的数组空间，对应 8 天每天上午下午的两个时间段，且全部初始化为<strong>1-可用</strong>，这些数组全部存放在医师对应的<code>ShiningSchedule</code>对象里，</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 返回一个全部为1-可用的空间长度为16的数组
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Integer<span style="color:#f92672">[]</span> <span style="color:#a6e22e">initArray</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">};</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+<li>
+<p>遍历医师的级别信息，将 4 个级别分成 4 个数组，各级别的医师 ID 存放在各级别的数组中，4 个数组存放在 key 为医师级别，value 为该级别数组的 map 中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 初始化医师级别map：key为level:级别id，value为该级别的所有医师ID
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initLevelMap</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO4 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#75715e">// 获取医师ID
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> doctorIds <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_ID_PREFIX<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Integer doctorId <span style="color:#f92672">:</span> doctorIds<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>            ShiningSchedule shiningSchedule <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ShiningSchedule<span style="color:#f92672">)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>shiningSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getLevel</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+                    LEVEL_NO1<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>shiningSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorId</span><span style="color:#f92672">());</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+                    LEVEL_NO2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>shiningSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorId</span><span style="color:#f92672">());</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">case</span> 3<span style="color:#f92672">:</span>
+                    LEVEL_NO3<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>shiningSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorId</span><span style="color:#f92672">());</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">case</span> 4<span style="color:#f92672">:</span>
+                    LEVEL_NO4<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>shiningSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorId</span><span style="color:#f92672">());</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">,</span> LEVEL_NO1<span style="color:#f92672">);</span>
+        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">,</span> LEVEL_NO2<span style="color:#f92672">);</span>
+        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">,</span> LEVEL_NO3<span style="color:#f92672">);</span>
+        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">,</span> LEVEL_NO4<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>筛选请假表时间，另有安排的将该医生的该段时间更新为<strong>0-不可用</strong></p>
+<blockquote>
+<p>遍历每个医生的时间安排，如果包含手术请假信息，判断该时间覆盖了数组空间的什么位置，这些位置全部置 0，关于变量 day 和对应数组位置的关系如下表</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">下标\对应天数</th>
+<th align="center">第 1 天(今天)</th>
+<th align="center">第 2 天</th>
+<th align="center">第 3 天</th>
+<th align="center">第 4 天</th>
+<th align="center">第 5 天</th>
+<th align="center">第 6 天</th>
+<th align="center">第 7 天</th>
+<th align="center">第 8 天</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">排班表数组下标[]:</td>
+<td align="center">0、1</td>
+<td align="center">2、3</td>
+<td align="center">4、5</td>
+<td align="center">6、7</td>
+<td align="center">8、9</td>
+<td align="center">10、11</td>
+<td align="center">12、13</td>
+<td align="center">14、15</td>
+</tr>
+<tr>
+<td align="center">对应天数 day:</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+</tr>
+</tbody>
+</table>
+<p>说明：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> fromTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">().</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">();</span>
+</code></pre></div><p>请假表的开始时间如果处于上午，那么获取结束时间相减得到持续时间，持续时间内涵盖的置 0，</p>
+<p>假设请假是 3 天，周一下午到周三上午 9 点，那么周一下午、周二一天、周三上午都应该算请假</p>
+<p>第一遍循环 duration_Day = 2，day[1]置 0、day[2]置 0，最后 duration_Day 自减 1</p>
+<p>第二遍循环 duration_Day = 1，判断是否是最后一天，是最后一天则根据结束时间来选择最后一天的上午下午是否置 0</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 根据请假表的信息填充各医师排班
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setLeaveTime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 获取当前的医师ID
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> doctorIds <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_ID_PREFIX<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 获取所有已经审核通过的查询时间内的请假或手术信息
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Leave<span style="color:#f92672">&gt;</span> leaves <span style="color:#f92672">=</span> leaveService<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorValidLeave</span><span style="color:#f92672">(</span>doctorIds<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Leave leave <span style="color:#f92672">:</span> leaves<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            Integer doctorId <span style="color:#f92672">=</span> leave<span style="color:#f92672">.</span><span style="color:#a6e22e">getDoctorId</span><span style="color:#f92672">();</span>
+            ShiningSchedule doctorSchedule <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ShiningSchedule<span style="color:#f92672">)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">);</span>
+            <span style="color:#75715e">// 获取排班表
+</span><span style="color:#75715e"></span>            Integer<span style="color:#f92672">[]</span> schedule <span style="color:#f92672">=</span> doctorSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">getSchedule</span><span style="color:#f92672">();</span>
+            <span style="color:#75715e">// 拿到该医师的请假信息
+</span><span style="color:#75715e"></span>            Date fromTime <span style="color:#f92672">=</span> leave<span style="color:#f92672">.</span><span style="color:#a6e22e">getFromTime</span><span style="color:#f92672">();</span>
+            Date toTime <span style="color:#f92672">=</span> leave<span style="color:#f92672">.</span><span style="color:#a6e22e">getToTime</span><span style="color:#f92672">();</span>
+
+            <span style="color:#66d9ef">int</span> fromHour <span style="color:#f92672">=</span> fromTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getHours</span><span style="color:#f92672">();</span>
+
+            <span style="color:#75715e">// 判断开始时间距离今天是几天
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> fromTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">().</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">();</span>
+
+            <span style="color:#75715e">// 拿到持续日期
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> durationDay <span style="color:#f92672">=</span> toTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> fromTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">();</span>
+            <span style="color:#75715e">// 拿到持续小时
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> toHour <span style="color:#f92672">=</span> toTime<span style="color:#f92672">.</span><span style="color:#a6e22e">getHours</span><span style="color:#f92672">();</span>
+            <span style="color:#75715e">// 将排班表对应的时间设置为0-不可用
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fromHour <span style="color:#f92672">&lt;=</span> 12<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 请假从上午开始
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>durationDay <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 如果持续时间大于一天
+</span><span style="color:#75715e"></span>                    schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 将上午置0
+</span><span style="color:#75715e"></span>                    schedule<span style="color:#f92672">[</span>day<span style="color:#f92672">++</span> <span style="color:#f92672">*</span> 2 <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 下午置0
+</span><span style="color:#75715e"></span>                    <span style="color:#f92672">--</span>durationDay<span style="color:#f92672">;</span><span style="color:#75715e">// 持续天数自减
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span>
+                <span style="color:#75715e">// 开始处理最后一天
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>durationDay <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 持续时间仅当天，且包含下午
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>toHour <span style="color:#f92672">&gt;</span> 8 <span style="color:#f92672">&amp;&amp;</span> toHour <span style="color:#f92672">&lt;</span> 12<span style="color:#f92672">)</span>
+                        schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">// 持续时间仅上午
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>toHour <span style="color:#f92672">&gt;=</span> 12<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        <span style="color:#75715e">// 持续时间包含下午
+</span><span style="color:#75715e"></span>                        schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+                        schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2 <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#75715e">// 结束处理最后一天
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 请假从下午开始
+</span><span style="color:#75715e"></span>                schedule<span style="color:#f92672">[</span>day<span style="color:#f92672">++</span> <span style="color:#f92672">*</span> 2 <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 先将下午置0
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>durationDay <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 如果持续时间大于一天
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">// 开始处理最后一天
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>durationDay <span style="color:#f92672">==</span> 1 <span style="color:#f92672">&amp;&amp;</span> toHour <span style="color:#f92672">&gt;</span> 8 <span style="color:#f92672">&amp;&amp;</span> toHour <span style="color:#f92672">&lt;=</span> 12<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 将上午置0
+</span><span style="color:#75715e"></span>                        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                    <span style="color:#75715e">// 结束处理最后一天
+</span><span style="color:#75715e"></span>                    schedule<span style="color:#f92672">[</span>day <span style="color:#f92672">*</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 将上午置0
+</span><span style="color:#75715e"></span>                    schedule<span style="color:#f92672">[</span>day<span style="color:#f92672">++</span> <span style="color:#f92672">*</span> 2 <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">// 下午置0
+</span><span style="color:#75715e"></span>                    <span style="color:#f92672">--</span>durationDay<span style="color:#f92672">;</span><span style="color:#75715e">// 持续天数自减
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// 更新map信息
+</span><span style="color:#75715e"></span>            doctorSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">setSchedule</span><span style="color:#f92672">(</span>schedule<span style="color:#f92672">);</span>
+            SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">,</span> doctorSchedule<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+<li>
+<p>对科室进行排班</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 根据科室中的医师排班表排出科室时间表
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setFinalSchedule</span><span style="color:#f92672">(</span>Integer deptId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 获取所有信息
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 这是一个部门时间表
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>ShiningSchedule<span style="color:#f92672">&gt;</span> deptFinalSchedule <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#75715e">// 初始化一个数组用来暂存被安排的医师
+</span><span style="color:#75715e"></span>        Integer<span style="color:#f92672">[]</span> deptScheduleDoctorId <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">[]{</span>0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">};</span>
+
+        <span style="color:#75715e">// 取出等级信息
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO1 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO3 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;3&#34;</span><span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL_NO4 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>LEVEL_PREFIX <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> deptScheduleDoctorId<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+
+            <span style="color:#75715e">// 根据从高等级到低等级的顺序找到一位时间可用的医生
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>LEVEL_NO1 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> LEVEL_NO1<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 判断该等级下是否有医生
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 判断该等级医生是否时间有效
+</span><span style="color:#75715e"></span>                buildSchedule<span style="color:#f92672">(</span>LEVEL_NO1<span style="color:#f92672">,</span> deptScheduleDoctorId<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#75715e">// 根据从高等级到低等级的顺序找到一位时间可用的医生
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>LEVEL_NO2 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> LEVEL_NO2<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 判断该等级下是否有医生
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 判断该等级医生是否时间有效
+</span><span style="color:#75715e"></span>                buildSchedule<span style="color:#f92672">(</span>LEVEL_NO2<span style="color:#f92672">,</span> deptScheduleDoctorId<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#75715e">// 根据从高等级到低等级的顺序找到一位时间可用的医生
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>LEVEL_NO3 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> LEVEL_NO3<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 判断该等级下是否有医生
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 判断该等级医生是否时间有效
+</span><span style="color:#75715e"></span>                buildSchedule<span style="color:#f92672">(</span>LEVEL_NO3<span style="color:#f92672">,</span> deptScheduleDoctorId<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#75715e">// 根据从高等级到低等级的顺序找到一位时间可用的医生
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>LEVEL_NO4 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> LEVEL_NO4<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 判断该等级下是否有医生
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 判断该等级医生是否时间有效
+</span><span style="color:#75715e"></span>                buildSchedule<span style="color:#f92672">(</span>LEVEL_NO4<span style="color:#f92672">,</span> deptScheduleDoctorId<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// 已经完成科室内的排班，接下来向list中封装
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Integer doctorId <span style="color:#f92672">:</span> deptScheduleDoctorId<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            ShiningSchedule doctor <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ShiningSchedule<span style="color:#f92672">)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">);</span>
+            deptFinalSchedule<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>doctor<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>DEPT_PREFIX <span style="color:#f92672">+</span> deptId<span style="color:#f92672">,</span> deptFinalSchedule<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 对某一级别中的医师进行排班
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildSchedule</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> LEVEL<span style="color:#f92672">,</span> Integer<span style="color:#f92672">[]</span> deptScheduleDoctorId<span style="color:#f92672">,</span> Integer i<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Integer doctorId <span style="color:#f92672">:</span> LEVEL<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// 取出医生
+</span><span style="color:#75715e"></span>            ShiningSchedule doctor <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ShiningSchedule<span style="color:#f92672">)</span> SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">);</span>
+            <span style="color:#75715e">// 取出时间表
+</span><span style="color:#75715e"></span>            Integer<span style="color:#f92672">[]</span> schedule <span style="color:#f92672">=</span> doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">getSchedule</span><span style="color:#f92672">();</span>
+            <span style="color:#75715e">// 如果这段时间已安排医师，那么将此医师的这段时间置0，否则不变
+</span><span style="color:#75715e"></span>            schedule<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> deptScheduleDoctorId<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> 0 <span style="color:#f92672">?</span> 0 <span style="color:#f92672">:</span> schedule<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+
+            <span style="color:#75715e">// 如果此医师这段时间有空，那么将医师ID暂存，否则跳过这个医师
+</span><span style="color:#75715e"></span>            deptScheduleDoctorId<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> schedule<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 1 <span style="color:#f92672">?</span> doctorId <span style="color:#f92672">:</span> deptScheduleDoctorId<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+
+            <span style="color:#75715e">// 更新map
+</span><span style="color:#75715e"></span>            doctor<span style="color:#f92672">.</span><span style="color:#a6e22e">setSchedule</span><span style="color:#f92672">(</span>schedule<span style="color:#f92672">);</span>
+            SCHEDULE_MAP<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>DOCTOR_PREFIX <span style="color:#f92672">+</span> doctorId<span style="color:#f92672">,</span> doctor<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>附上请假表 service 层的查询有效请假单的代码</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Leave<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getDoctorValidLeave</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> doctorIds<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 获取当前时间
+</span><span style="color:#75715e"></span>        Date today <span style="color:#f92672">=</span> Timestamp<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>
+                <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span style="color:#f92672">,</span> Locale<span style="color:#f92672">.</span><span style="color:#a6e22e">SIMPLIFIED_CHINESE</span><span style="color:#f92672">).</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">())</span>
+        <span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 从当天0点查起
+</span><span style="color:#75715e"></span>        today<span style="color:#f92672">.</span><span style="color:#a6e22e">setHours</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        today<span style="color:#f92672">.</span><span style="color:#a6e22e">setMinutes</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        today<span style="color:#f92672">.</span><span style="color:#a6e22e">setSeconds</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        QueryWrapper<span style="color:#f92672">&lt;</span>Leave<span style="color:#f92672">&gt;</span> wrapper <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> QueryWrapper<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#75715e">// 查询已通过的
+</span><span style="color:#75715e"></span>        wrapper<span style="color:#f92672">.</span><span style="color:#a6e22e">eq</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;status&#34;</span><span style="color:#f92672">,</span> DataSourcesConstants<span style="color:#f92672">.</span><span style="color:#a6e22e">LEAVE_PASS</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 请假开始时间范围 从今天的零点开始
+</span><span style="color:#75715e"></span>        wrapper<span style="color:#f92672">.</span><span style="color:#a6e22e">ge</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;fromTime&#34;</span><span style="color:#f92672">,</span> today<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 查到下周
+</span><span style="color:#75715e"></span>        Date dateTo <span style="color:#f92672">=</span> Timestamp<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>
+                <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span style="color:#f92672">,</span> Locale<span style="color:#f92672">.</span><span style="color:#a6e22e">SIMPLIFIED_CHINESE</span><span style="color:#f92672">).</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">())</span>
+        <span style="color:#f92672">);</span>
+        dateTo<span style="color:#f92672">.</span><span style="color:#a6e22e">setDate</span><span style="color:#f92672">(</span>today<span style="color:#f92672">.</span><span style="color:#a6e22e">getDate</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> 8<span style="color:#f92672">);</span>
+        dateTo<span style="color:#f92672">.</span><span style="color:#a6e22e">setHours</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        dateTo<span style="color:#f92672">.</span><span style="color:#a6e22e">setMinutes</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        dateTo<span style="color:#f92672">.</span><span style="color:#a6e22e">setSeconds</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        wrapper<span style="color:#f92672">.</span><span style="color:#a6e22e">lt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;fromTime&#34;</span><span style="color:#f92672">,</span> dateTo<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 查询指定医生的请假单
+</span><span style="color:#75715e"></span>        wrapper<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;doctorId&#34;</span><span style="color:#f92672">,</span> doctorIds<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> baseMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">selectList</span><span style="color:#f92672">(</span>wrapper<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+</code></pre></div><p>对于 Java 中的 Date()类型的 API 我也不太熟悉，中间出过一个时间戳不正确的 bug，查不到对应时间的请假单，才知道问题出在 <code>new Date()</code>的代码上，Java 直接 new 一个 Date 对象是会有毫秒值的，而我希望可以从 0 点开始查询当天的有效请假单，百度了一下才知道<code>Timestamp.valueOf(new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;, Locale.SIMPLIFIED_CHINESE).format(new Date())</code>是可以格式化 Date()对象的，使用<code>&quot;yyyy-MM-dd HH:mm:ss&quot;</code>来舍弃毫秒字段，就能生成一个 <del>没有毫秒的</del> 毫秒数为 0 的 Date()对象了</p>
+<hr>
+<h1 id="总结">总结</h1>
+<blockquote>
+<p>我的这段代码其实还有很多地方可以优化</p>
+<ul>
+<li>可以试着不建立级别数组，而是根据 ID、级别两个数字来构建医师信息对象的 map key</li>
+<li>医师的级别是一个绝对优先级，也就是说假如高级别的没有请假或者手术安排，那么排班是不会轮到低级别的医师的</li>
+</ul>
+<p>等等……</p>
+<p>总之代码还是要多敲多练才能更熟练地解决实际生产中的需求问题，加油！</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Dawn </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://dawn666y.github.io/2020/02algorithm-schedule/>https://dawn666y.github.io/2020/02algorithm-schedule/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/java/">
+                    #java</a></span>
+            
+            <span class="tag"><a href="https://dawn666y.github.io/tags/algorithm/">
+                    #algorithm</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://dawn666y.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="prev" rel="prev" title="一个仓库管理系统的实现"><i class="iconfont icon-left"></i>&nbsp;一个仓库管理系统的实现</a>
+         
+        
+        <a href="https://dawn666y.github.io/2020/%E8%AE%BE%E8%AE%A1%E6%AF%95%E8%AE%BE%E9%A2%84%E7%BA%A6%E6%8C%82%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="next" rel="next" title="设计毕设预约挂号系统中遇到的问题">设计毕设预约挂号系统中遇到的问题&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+          
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: "e2ea845ea908ffb0be8b",
+    clientSecret: "0f908d99403a9c45b6e64847b03072d4b9ecd654",
+    repo: "dawn666y.github.io",
+    owner: "Dawn666Y",
+    admin: ["Dawn666Y"],
+    id: location.pathname, 
+    distractionFreeMode: false, 
+  });
+  (function () {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById("gitalk-container").innerHTML =
+        "Gitalk comments not available by default when the website is previewed locally.";
+      return;
+    }
+    gitalk.render("gitalk-container");
+  })();
+</script>
+
+
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://dawn666y.github.io/">Dawn</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

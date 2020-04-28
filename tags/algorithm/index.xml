@@ -13,10 +13,10 @@
     
     <item>
       <title>一个医师排班算法的实现</title>
-      <link>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://dawn666y.github.io/2020/02algorithm-schedule/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawn666y.github.io/2020/%E4%B8%80%E4%B8%AA%E5%8C%BB%E5%B8%88%E6%8E%92%E7%8F%AD%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://dawn666y.github.io/2020/02algorithm-schedule/</guid>
       <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
 本文旨在实现一个智能排班的算法
  需求分析 所需数据 项目落地 算法设计 总结   毕设项目中核心需求是要根据医师的手术、请假、已预约时间还有医师的级别来进行自动排班，也是毕设中最具难度的一个需求
