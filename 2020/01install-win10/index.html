@@ -256,7 +256,7 @@
 <p>UWP 的应用不能够通过 clash、SSR 这样的客户端完成代理，所以如果安装了 Telegram 的 UWP 版本，即使开着代理也是无法连接的。</p>
 <p>这是因为所有 UWP 应用均运行在被称为 App Container 的虚拟沙箱环境中，阻止了网络流量发送到本机（即 loopback）， 使大部分网络抓包调试工具无法对 UWP 应用进行流量分析。同样的，该机制也阻止了 UWP 应用访问 localhost，即使你在系统设置中启用了代理，也无法令 UWP 应用访问本地代理服务器，因此我们需要把想代理的应用从中剥离出来。</p>
 <p>左下角搜索运行打开，输入 <code>regedit</code> ，打开注册表编辑器，在左侧树形栏中找到 “计算机\HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Mappings”，这里即为所有 UWP 应用的注册表，找到要代理的应用，比如 Telegram</p>
-<p><img src="C:%5CUsers%5CDawn%5CDesktop%5Cimage%5Cimage-20200521203734102.png" alt="image-20200521203734102.png"></p>
+<p><img src="https://raw.githubusercontent.com/Dawn666Y/myPicGo/master/blog/image-20200521203734102.png" alt="image-20200521203734102.png"></p>
 <p>复制这一串代码，管理员权限打开命令行，执行 <code>CheckNetIsolation.exe loopbackexempt -a -p=SID</code> 把 SID 替换成上面复制出来的代码回车执行即可，会有提示完成，如果没有成功就是没有管理员权限</p>
 
     </div>
