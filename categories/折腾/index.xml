@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>折腾 on Dawn&#39;s vlog | Personal </title>
+    <link>https://dawn666y.github.io/categories/%E6%8A%98%E8%85%BE/</link>
+    <description>Recent content in 折腾 on Dawn&#39;s vlog | Personal </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 22 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawn666y.github.io/categories/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01install-win10</title>
+      <link>https://dawn666y.github.io/2020/01install-win10/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawn666y.github.io/2020/01install-win10/</guid>
+      <description>tips:点击左上角的爱心 ❤️ 可切换夜间模式保护眼睛哦！！
+记一次重装系统 前言  我的宏碁游戏本 勉强算游戏本吧 出厂预装 win8，也用了 4 年了，一开始没什么经验，我自己的编程环境啊、各种文件都特别乱，各个盘都散落着乱七八糟的数据，索性升级成 win10 拉倒，再者我对 win10 纯洁的 UWP 应用心生向往跃跃欲试，也就开始了这次折腾，其实升级成 win10 这件事儿是上个月初就完成的了，不过之前因为毕设、论文一系列事情耽误了，现在简单的记录大致流程以供学习参考。
+ 备份数据 想要重装系统，那第一件事情就是做好数据备份，这个每个人的情况不同就不需要赘述了，总之凡是在系统盘也就是 C 盘中的重要个人数据，请选择一块靠谱的移动硬盘进行备份，其它的非系统盘，D 盘，E 盘什么的看个人，想格式化也要备份。
+制作镜像盘 下载镜像 这个我选择网站 I tell you 的原版官方镜像，好处就是没有任何第三方的预装软件，非常纯净，据我所知联想的 win10 系统笔记本都会预装“联想电脑管家”这种自家软件，实在是恶心人
+选择操作系统最新(大概是吧)的 Windows 10, Version 1909 中 64 位即可
+点开详细信息就能看到磁力链接，用迅雷慢慢下载就好了，时间取决于网速，不过我记得蛮快的
+写入 U 盘 下载完成后就开始制作镜像盘，准备一个 8G 或以上的 U 盘，写入软件我使用 UltraISO 软碟通，过程百度就好了，很傻瓜的，这个过程需要半小时到一小时不等？大概？记不清
+安装 win10 修改 BIOS 启动项 大部分笔记本在开机第一个品牌界面按 F2，找不准就从屏幕亮起疯狂按就是了，然后就进入 BIOS 了，仔细看界面上或下的操作引导，找到启动项，将 U 盘插入的那个接口优先级上移即可，修改完成保存重启，记得提前插进 U 盘
+进入安装界面  选择要安装的版本  专业版、教育版、家庭版，港真我没觉得这都有什么区别，不过由于咱们这个是原版官方镜像，所以需要手动输入激活码激活，不然会影响一些正常功能使用。</description>
+    </item>
+    
+  </channel>
+</rss>
